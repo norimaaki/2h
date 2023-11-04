@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>シンプルメモ帳</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            textarea {
+                width: 300px;
+                height: 300px;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                padding: 10px 20px;
+                background-color: #008CBA;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a href="index.html"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230.90453" height="65.76939" viewBox="0,0,230.90453,65.76939"><defs><linearGradient x1="240" y1="152.61416" x2="240" y2="207.38584" gradientTransform="translate(-105.90138,-163.20345) scale(0.84259,0.84259)" gradientUnits="userSpaceOnUse" id="color-1"><stop offset="0" stop-color="#ffe500"/><stop offset="1" stop-color="#ff0000"/></linearGradient><linearGradient x1="240" y1="152.61416" x2="240" y2="207.38584" gradientTransform="translate(-105.90138,-163.20345) scale(0.84259,0.84259)" gradientUnits="userSpaceOnUse" id="color-2"><stop offset="0" stop-color="#000000"/><stop offset="1" stop-color="#ffffff"/></linearGradient><linearGradient x1="240" y1="152.61416" x2="240" y2="207.38584" gradientUnits="userSpaceOnUse" id="color-3"><stop offset="0" stop-color="#ffe500"/><stop offset="1" stop-color="#ff0000"/></linearGradient><linearGradient x1="240" y1="152.61416" x2="240" y2="207.38584" gradientUnits="userSpaceOnUse" id="color-4"><stop offset="0" stop-color="#000000"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs><g transform="translate(-125.09234,-143.01507)"><g data-paper-data="{&quot;isPaintingLayer&quot;:true}" fill="url(#color-3)" fill-rule="nonzero" stroke="url(#color-4)" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" font-size="40" text-anchor="start" style="mix-blend-mode: normal"><text transform="translate(125.68575,193.69292) scale(1.18682,1.18682)" font-size="40" xml:space="preserve" fill="url(#color-1)" fill-rule="nonzero" stroke="url(#color-2)" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="Sans Serif" font-weight="normal" text-anchor="start" style="mix-blend-mode: normal"><tspan x="0" dy="0">𝙼𝚊𝚡𝙶𝚊𝚖𝚎𝚜</tspan><animate attributeName="x" values="10; 15; 10;" dur="0.1s" repeatCount="indefinite" /><animate attributeName="y" values="10; 15; 10;" dur="0.1s" repeatCount="indefinite" /></text></g></g></svg></a>
+            <textarea id="memo" placeholder="ここにメモを入力してください"></textarea>
+            <button onclick="saveMemo()">保存</button>
+            <button onclick="localStorage.clear();">メモを初期化</button>
+        </div>
+        <footer>
+            <p>Copyright&copy; Max Games</p>
+        </footer>
+
+
+        <script>
+            window.onload = function() {
+                const memo = localStorage.getItem('memo');
+                if (memo) {
+                    document.getElementById('memo').value = memo;
+                }
+            };
+
+            function saveMemo() {
+                const memo = document.getElementById('memo').value;
+                localStorage.setItem('memo', memo);
+                alert('メモが保存されました');
+            }
+        </script>
+    </body>
+</html>

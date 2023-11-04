@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Max Gamesの公式ホームページです。多分ないと思いますけど、引用とかする場合は必ずクレジットを書いてください。">
+        <meta name="keywords" content="max, マックス, maxgames, マックスゲームズ, happy, 2hm01, ハッピー, happy">
+        <meta name="google-site-verification" content="t335eCdRqAvTGzTk9G8OfPXZBkEOmqu6k-I7tDdmGgM" />
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon" href="icon.png">
+        <link rel="stylesheet" href="aos.css">
+        <script src="aos.js"></script>
+        <title>Max Games is...</title>
+        <style>
+            html {
+                overflow-x: hidden;
+            }
+            body, h1, h2, p, ul {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                overflow-x: hidden;
+                font-family: 'Courier', monospace;
+                padding-top: 60px;
+                margin-bottom: 50px;
+                position: relative;
+            }
+            
+            header {
+                z-index: 999;
+                background-color: #333;
+                color: #fff;
+                text-align: right;
+                padding: 20px 10px;
+                position: fixed;
+                width: 100%;
+                top: 0;
+            }
+            
+            .hamburger-menu {
+                cursor: pointer;
+                display: inline-block;
+                margin-right: 20px;
+            }
+            
+            .hamburger-menu span {
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                margin: 5px 0;
+                border-radius: 5px;
+                transition: 0.4s;
+            }
+            
+            .hamburger-menu.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            
+            .hamburger-menu.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger-menu.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            nav {
+                display: none;
+                text-align: center;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #333;
+                width: 100%;
+                animation: slideIn 0.5s forwards;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                list-style: none;
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            nav li {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            nav a {
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+            }
+            
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-100%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .hero {
+                text-align: center;
+                padding: 160px 0;
+                color: #fff;
+                background-image: url('haikei.png');
+                background-size: cover;
+            }
+            
+            .hero hr{
+                width: 300px;
+            }
+            
+            .cta-button {
+                display: inline-block;
+                background-color: #009900;
+                color: #fff;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            
+            .features {
+                text-align: center;
+                padding: 50px 0;
+            }
+            
+            .feature {
+                margin: 20px;
+                border: 1px solid #000;
+                border-radius: 10px;
+                box-shadow: 10px 5px 5px #333;
+                color: #fff;
+                background-color: #555;
+                text-align: left;
+                padding: 10px;
+                font-family: serif;
+            }
+            
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px 0;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+            
+            nav hr {
+                margin: 5px 0;
+                border: 0;
+                border-top: 1px solid #555;
+            }
+            h1 {
+                font-size: 38px;
+            }
+            div a{
+                color: #FFD700;
+            }
+            #movingElement {
+                width: 50px;
+                position: absolute;
+            }
+            #movingElement img {
+                width: 50px;
+                z-index: 10000;
+            }
+            .buttonpppp {
+                border-style: solid;
+                border-radius: 0;
+                width: 150px;
+                height: 30px;
+                font-size: 30px;
+            }
+            .buttonok {
+                border-style: solid;
+                border-radius: 0;
+                background-color: #080;
+                width: 80px;
+                height: 50px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div data-aos="fade-left" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#nanimono">何者?</a></li>
+                    <hr>
+                    <li><a href="#happy">Happy</a></li>
+                    <hr>
+                    <li><a href="#2hm">2hm01</a></li>
+                    <hr>
+                    <li><a href="#satsuei">撮影参加について</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="hero">
+            <h1>welcome to here.</h1>
+            <hr>
+            <a href="https://line.me/ti/g2/T4FwqMo9NdLCf4IT-grFt8HIyqtGtayZnGDy3w?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" class="cta-button">LINEオプチャ</a>
+        </section>
+        <!---公式キャラクター--->
+
+
+        <div id="movingElement"><img src="oc.PNG"></div>
+
+
+        <!---公式キャラクター--->
+        <section class="features">
+            <button id="copyButton">リンクをコピー</button>
+            <h2 data-aos="fade-left">何者?</h2>
+            <div data-aos="fade-right" class="feature" id="nanimono">
+                <p>
+                    私たちはMax Gamesという
+                    <br>
+                    Robloxの実況者であり、
+                    <br>
+                    おもしろいツールの提供者でもあります。
+                    <br>
+                    Happyと2hm01の2人組のグループです。
+                    <br>
+                    視聴者のみなさんが
+                    <br>
+                    おもしろいと言える投稿をすることが
+                    <br>
+                    目標です。（当たり前や！）
+                    <br>
+                    チャンネル登録していただければ
+                    <br>
+                    幸いです。
+                </p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2 id="happy">Happy is...</h2>
+            <div class="feature" data-aos="flip-left" >
+                <p>
+                    こんにちは😃
+                    <br>
+                    Happyと申します。
+                    <br>
+                    Max Gamesのリーダーであり、
+                    <br>
+                    Robloxの実況やってます。
+                    <br>
+                    相方の2hm01もRobloxやってます。
+                    <br>
+                   ぜひ、チャンネル登録してください。
+                </p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2 id="2hm">2hm01 is...</h2>
+            <div class="feature" data-aos="flip-right">
+                <p>
+                    2hm01と申します。
+                    <br>
+                    Robloxの実況と
+                    <br>
+                    おもしろいツールの作成をしています。
+                    <br>
+                    最近の趣味は<a href="https://scratch.mit.edu/">Scratch</a>です。。
+                    <br>
+                    もしよかったら、
+                    <br>
+                    チャンネル登録していただければ
+                    <br>
+                    と思います。
+                </p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2 id="satsuei">撮影参加について</h2>
+            <div class="feature" data-aos="zoom-in">
+                <p>
+                    撮影参加する場合は、
+                    <br>
+                    <a href="https://chch.norimaaki.repl.co/">ここ</a>で確認してください。
+                </p>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2>外部リンク</h2>
+            <div class="feature" data-aos="flip-up">
+                <a href="memo.html">メモ帳</a><br>
+                <a href="https://chch.norimaaki.repl.co/">Chatroom</a><br>
+                <a href="https://youtube.com/@MaxGames-jj2wn">YouTubeチャンネル</a><br>
+                <a href="https://norimaaki.github.io/">おもしろいツール</a><br>
+                <a href="zalgo.html">Zalgo Text Generator</a><br>
+                <a href="moon.html">月</a><br>
+                <a href="https://line.me/ti/g2/T4FwqMo9NdLCf4IT-grFt8HIyqtGtayZnGDy3w?utm_source=invitation&utm_medium=link_copy&utm_campaign=default">LINEオープンチャット</a>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <h2>ライセンス</h2>
+            <p>利用する場合、クレジットの明記してください。</p>
+            <hr>
+            <br>
+            <hr>
+            <form class="pppp" onsubmit="document.location.href=this.PW.value + '.html'; return false">
+                <input class="buttonpppp" type="password" name="PW">
+                <input class="buttonok" type="submit" value="OK">
+                </form>
+        </section>
+        <footer data-aos="fade-right">
+            <p>Copyright&copy; Max Games</p>
+        </footer>
+        <script>
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const nav = document.querySelector('nav');
+            
+            hamburgerMenu.addEventListener('click', () => {
+                hamburgerMenu.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+        </script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            const movingElement = document.getElementById("movingElement");
+            let mouseX = 0;
+            let mouseY = 0;
+            let elementX = 0;
+            let elementY = 0;
+
+            function updateElementPosition() {
+                const deltaX = mouseX - elementX;
+                const deltaY = mouseY - elementY;
+
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const speed = distance / 50;
+
+                const angle = Math.atan2(deltaY, deltaX);
+                const velocityX = Math.cos(angle) * speed;
+                const velocityY = Math.sin(angle) * speed;
+
+                elementX += velocityX;
+                elementY += velocityY;
+
+                movingElement.style.left = `${elementX - movingElement.clientWidth / 2}px`;
+                movingElement.style.top = `${elementY - movingElement.clientHeight / 2}px`;
+
+                requestAnimationFrame(updateElementPosition);
+            }
+
+            document.addEventListener("mousemove", (event) => {
+                mouseX = event.pageX;
+                mouseY = event.pageY;
+            });
+
+            function init() {
+                elementX = window.innerWidth / 2; // 初期位置をウィンドウの中心に設定
+                elementY = window.innerHeight / 2;
+                updateElementPosition();
+            }
+
+            init();
+        </script>
+        <script>
+            document.getElementById('copyButton').addEventListener('click', function() {
+                var linkToCopy = 'https://2h.f5.si/';
+
+                var tempInput = document.createElement('input');
+                tempInput.value = linkToCopy;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                alert('リンクがコピーされました: ' + linkToCopy);
+            });
+        </script>
+    </body>
+</html>
