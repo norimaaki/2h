@@ -1,3 +1,3 @@
 # Happy Games
 
-[KARAAGE](javascript:alert('hello'))
+[KARAAGE](data:text/js;base64,YWxlcnQoJ2hlbGxvJyk=)
